@@ -1,53 +1,71 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import uuid from 'react-uuid';
 
 import '../styles/add-form.css';
 
-const AddForm = ({addNote, isOpened, setIsOpened}) => {
+const AddForm = ({addNote, isOpened, setIsOpened, setEditedNote, editedNote, isEdited, setIsEdited,onEdit}) => {
    const [title, setTitle] = useState('');
    const [content, setContent] = useState('');
+
+   const passEditData = () => {
+      if (editedNote && isEdited) {
+         setTitle(editedNote.title);
+         setContent(editedNote.content);
+      }
+   };
+
+   useEffect(() => {
+      passEditData();
+   }, [isEdited, editedNote]);
 
    const handleSubmit = (e) => {
       e.preventDefault();
 
-      //if adding new
-      const date = new Date();
-      const id = uuid();
-      addNote({id, date, content, title});
+      if (isEdited) {
+         const id = editedNote.id;
+         onEdit({id, content, title});
+      } else {
+         //if adding new
+         const id = uuid();
+         addNote({id, content, title});
+      }
 
-      setIsOpened(false)
+      handleClose();
    };
+
+   const handleClose = () => {
+
+      if (isEdited) {
+         setIsEdited(false)
+         setEditedNote('')
+      }
+
+      setContent('')
+      setTitle('')
+      setIsOpened(false);
+   }
 
    return (
       <div className={isOpened ? 'window visible' : 'window hidden'}>
-         <p onClick={()=>setIsOpened(false)}>X</p>
-         <>
-            <form
-               onSubmit={handleSubmit}
-               className='add-form'
-            >
-               <input
-                  type='text'
-                  name='title'
-                  id='title'
-                  onChange={(e) => setTitle(e.target.value)}
-                  value={title}
-               />
-               <textarea
-                  name='content'
-                  id='content'
-                  cols='30'
-                  rows='10'
-                  value={content}
-                  onChange={(e) => setContent(e.target.value)}
-               ></textarea>
+         <p onClick={()=>handleClose()}>X</p>
+         <form onSubmit={handleSubmit}>
+            <label htmlFor='title'>Title:</label>
+            <input
+               type='text'
+               id='title'
+               value={title}
+               onChange={(e) => setTitle(e.target.value)}
+            />
 
-               <input
-                  type='submit'
-                  value='submit'
-               />
-            </form>
-         </>
+            <label htmlFor='content'>Content:</label>
+            <textarea
+               id='content'
+               value={content}
+               onChange={(e) => setContent(e.target.value)}
+            ></textarea>
+
+            <button type='submit'>{isEdited ? 'Save Changes' : 'Add Note'}</button>
+         </form>
       </div>
    );
 };

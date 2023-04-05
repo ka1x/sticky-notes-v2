@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Note, NoteFull} from '.';
 import '../styles/note.css';
 
-const NoteGallery = ({notes, onEdit, onDelete}) => {
+const NoteGallery = ({notes, onEdit, onDelete, setEditedNote, setIsEdited, setOpenForm}) => {
    const [seletedNote, setSeletedNote] = useState('');
    const [openNote, setOpenNote] = useState(false);
 
@@ -11,10 +11,13 @@ const NoteGallery = ({notes, onEdit, onDelete}) => {
       setOpenNote(true);
    };
 
+
    return (
       <>
          <div className='note-gallery'>
-            {notes.map((item, i) => (
+            {notes
+            .sort((a, b) => new Date(b.date) - new Date(a.date))
+            .map((item, i) => (
                <div
                   className='note'
                   onClick={() => handleItemClick(item)}
@@ -30,6 +33,9 @@ const NoteGallery = ({notes, onEdit, onDelete}) => {
                note={seletedNote}
                onEdit={onEdit}
                onDelete={onDelete}
+               setEditedNote={setEditedNote}
+               setIsEdited={setIsEdited}
+               setOpenForm={setOpenForm}
             />
          </div>
       </>

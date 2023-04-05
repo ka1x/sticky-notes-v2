@@ -1,7 +1,14 @@
 import React from 'react';
 import '../styles/add-form.css';
 
-const NoteFull = ({isOpened, setIsOpened, note, onEdit, onDelete}) => {
+const NoteFull = ({isOpened, setIsOpened, note, onDelete,setEditedNote, setIsEdited, setOpenForm }) => {
+   const handleEdit = () => {
+		setEditedNote(note)
+		setIsEdited(true)
+      setIsOpened(false)
+      setOpenForm(true)
+	};
+
    const handleDelete = () => {
       onDelete(note.id);
       setIsOpened(false);
@@ -18,7 +25,10 @@ const NoteFull = ({isOpened, setIsOpened, note, onEdit, onDelete}) => {
                className='fa-solid fa-trash'
                onClick={() => handleDelete()}
             ></i>
-            <i className='fa-solid fa-pen-to-square'></i>
+            <i
+               className='fa-solid fa-pen-to-square'
+               onClick={() => handleEdit()}
+            ></i>
          </div>
       </>
    );

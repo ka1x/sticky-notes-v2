@@ -6,6 +6,9 @@ function App() {
 
    const [openForm, setOpenForm] = useState(false);
 
+   const [isEdited, setIsEdited] = useState(false);
+   const [editedNote, setEditedNote] = useState('');
+
    // saving in local storgae
    useEffect(() => {
       localStorage.setItem('notes', JSON.stringify(notes));
@@ -13,13 +16,26 @@ function App() {
 
    //creates new note
    const createNew = (item) => {
-      const newNote = {
-         title: item.title,
-         content: item.content,
-         date: item.date,
-         id: item.id,
-      };
-      return newNote;
+      if (isEdited) {
+         const newNote = {
+            title: item.title,
+            content: item.content,
+            date: editedNote.date,
+            id: item.id,
+            
+         };
+         return newNote;
+      } else {
+         const date = new Date();
+         const newNote = {
+            title: item.title,
+            content: item.content,
+            date: date,
+            id: item.id,
+         };
+         return newNote;
+      }
+      
    };
 
    // adds new note to notes
@@ -50,11 +66,19 @@ function App() {
             addNote={addNote}
             isOpened={openForm}
             setIsOpened={setOpenForm}
+            setEditedNote={setEditedNote}
+            editedNote={editedNote}
+            isEdited={isEdited}
+            setIsEdited={setIsEdited}
+            onEdit={editNote}
          />
          <NoteGallery
             notes={notes}
             onEdit={editNote}
             onDelete={deleteNote}
+            setEditedNote={setEditedNote}
+            setIsEdited={setIsEdited}
+            setOpenForm={setOpenForm}
          />
       </>
    );
