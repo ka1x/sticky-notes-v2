@@ -1,5 +1,13 @@
 
-.add-form{
-	border: 1px solid black;
-	padding: 1rem;
+
+.window{
+
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	width: 75%;
+	height: 50%;
+	background-color: var(--background-col);
+
 }

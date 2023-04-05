@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import '../styles/note.css';
 
-const Note = () => {
-  return (
-	 <div>Note</div>
-  )
-}
+const Note = ({key, note}) => {
+   return (
+      <>
+         <p>title:{note.title}</p>
+         {/* <p>date:{note.date}</p> */}
+         <p>content:{note.content}</p>
+      </>
+   );
+};
 
-export default Note
+export default Note;

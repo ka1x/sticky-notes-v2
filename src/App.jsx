@@ -4,6 +4,8 @@ import {AddForm, NoteGallery} from './components';
 function App() {
    const [notes, setNotes] = useState(localStorage.notes ? JSON.parse(localStorage.notes) : []);
 
+   const [openForm, setOpenForm] = useState(false);
+
    // saving in local storgae
    useEffect(() => {
       localStorage.setItem('notes', JSON.stringify(notes));
@@ -34,7 +36,7 @@ function App() {
    };
 
    // edit item
-   const onEdit = (item) => {
+   const editNote = (item) => {
       const newNote = createNew(item);
       const updatedNotews = notes.filter((a) => a.id !== item.id);
       setNotes([...updatedNotews, newNote]);
@@ -42,8 +44,18 @@ function App() {
 
    return (
       <>
-         <AddForm addNote={addNote} />
-          <NoteGallery notes={notes}/>
+         <button onClick={() => setOpenForm(true)}>add note</button>
+
+         <AddForm
+            addNote={addNote}
+            isOpened={openForm}
+            setIsOpened={setOpenForm}
+         />
+         <NoteGallery
+            notes={notes}
+            onEdit={editNote}
+            onDelete={deleteNote}
+         />
       </>
    );
 }
