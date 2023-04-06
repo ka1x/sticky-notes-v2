@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 
 :root {
-   --text-col: rgb(56, 57, 133);
+   /* --text-col: #333333; */
+   /* --text-light: #555555; */
    
+   --text-col:#4c3460;
 
    --white3: rgba(255, 255, 255, 0.3);
    --white7: rgba(255, 255, 255, 0.7);
@@ -14,7 +16,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   font-family: 'Raleway', sans-serif;
+   font-family: 'Poppins', sans-serif;
 }
 
 html {

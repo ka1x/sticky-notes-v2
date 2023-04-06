@@ -12,12 +12,12 @@
 
 .nav button{
 	border-radius: 50%;
-	width: 35px;
+	width: 45px;
 	height: 45px;
 	outline: none;
 	border: none;
 	padding: 0;
 	margin: .8rem;
-	background-color: white;
+	/* background-color: white; */
 }
 

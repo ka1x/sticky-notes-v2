@@ -1,44 +1,50 @@
 .note-gallery {
-   width: 80%;
-   height: 80%;
+   /* width: 80%; */
+   /* height: 80%; */
+   width: 90%;
+   height: 100%;
    position: absolute;
-   left: 52%;
+   /* left: 52%; */
+   /* top: 50%; */
+   /* transform: translate(-50%, -50%); */
+   right: 0;
    top: 50%;
-   transform: translate(-50%, -50%);
+   transform: translateY(-50%);
 
    display: flex;
    flex-wrap: wrap;
    align-content: flex-start;
-   justify-content: flex-start;
+   justify-content: center;
    gap: 2rem;
 
-   background: rgba(255, 255, 255, 0.3);
-   padding: 5%;
+   /* background: rgba(255, 255, 255, 0.3); */
+   padding: 5% 0;
    border-radius: 20px;
    overflow-y: scroll;
 }
 
 .note {
-   min-width: 200px;
-   max-width: 400px;
-   width: 33%;
-   height: 250px;
-   padding: 1rem 2rem;
-   position: relative;
+   /* Type=To Do */
 
+   box-sizing: border-box;
+
+   /* Auto layout */
    display: flex;
-   align-items: flex-start;
    flex-direction: column;
+   align-items: flex-start;
    justify-content: space-around;
+   padding: 15px;
    gap: 10px;
+   isolation: isolate;
+   
 
-   color: var(--text-col);
-   cursor: pointer;
+   width: 300px;
+   height: 250px;
 
-   background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
-   border-radius: 1.2rem;
-   flex: 1;
-   backdrop-filter: blur(2rem);
+   background: rgba(255, 255, 255, 0.3);
+   border: 1px solid var(--text-col);
+   box-shadow: 2px 2px 0px var(--text-col);
+   border-radius: 12px;
 }
 
 /* ---------------------------------------- */
@@ -50,7 +56,8 @@
 .note .note-content {
    /* this prevents text from overflowing the note */
    word-wrap: break-word;
-   font-size: 0.8rem;
+   letter-spacing: 2px;
+   color: var(--text-col);
 }
 
 .note .note-header-container {
@@ -60,12 +67,13 @@
    height: 40%;
 }
 .note .note-header-container .note-date {
-   font-size: 0.7rem;
-   letter-spacing: 5px;
+   font-size: 10px;
+   color: var(--text-light);
 }
 
 .note .note-header-container .note-title {
-   font-size: 1.5rem;
+   font-size: 1rem;
+
 }
 .note .note-header-container .line {
    /* border-bottom: 3px solid rgba(255, 255, 255, 0.7); */
@@ -117,7 +125,7 @@
 
 /* ----------------------------------- */
 /* media queries */
-
+/* 
 @media screen and (max-width: 890px) {
    .note {
       height: 250px;
@@ -154,4 +162,4 @@
    .note {
       height: 300px;
    }
-}
+} */
