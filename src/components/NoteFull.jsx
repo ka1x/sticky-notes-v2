@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/add-form.css';
+import '../styles/window.css';
 
 const NoteFull = ({isOpened, setIsOpened, note, onDelete, setEditedNote, setIsEdited, setOpenForm}) => {
    const handleEdit = () => {
@@ -17,19 +17,30 @@ const NoteFull = ({isOpened, setIsOpened, note, onDelete, setEditedNote, setIsEd
    return (
       <>
          <div className={isOpened ? 'window visible' : 'window hidden'}>
-            <div className='window-content'>
-               <p onClick={() => setIsOpened(false)}>X</p>
-               <p>title:{note.title}</p>
-               <p>content:{note.content}</p>
+            <div className='window-content note-full'>
+               <p
+                  className='form-close'
+                  onClick={() => setIsOpened(false)}
+               >
+                  <i class='fa-solid fa-xmark'></i>
+               </p>
 
-               <i
-                  className='fa-solid fa-trash'
-                  onClick={() => handleDelete()}
-               ></i>
-               <i
-                  className='fa-solid fa-pen-to-square'
-                  onClick={() => handleEdit()}
-               ></i>
+               <p className='date'>{new Date(note.date).toLocaleDateString('en-GB', {month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric'})}</p>
+
+               <p className='title'>{note.title === '' ? 'Untitled' : note.title}</p>
+               <div className='line'></div>
+               <p className='content'>{note.content}</p>
+
+               <div className='icons'>
+                  <i
+                     className='fa-solid fa-trash'
+                     onClick={() => handleDelete()}
+                  ></i>
+                  <i
+                     className='fa-solid fa-pen-to-square'
+                     onClick={() => handleEdit()}
+                  ></i>
+               </div>
             </div>
          </div>
       </>

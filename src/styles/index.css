@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 
 :root {
-   /* --text-col: #333333; */
-   /* --text-light: #555555; */
-   
+  
    --text-col:#4c3460;
 
    --white3: rgba(255, 255, 255, 0.3);
@@ -25,61 +23,36 @@ html {
    min-height: 100vh;
 }
 
-a,
-a::after,
-a:focus {
-   text-decoration: none;
-   color: inherit;
-}
-
-body{
-   overflow-x: hidden;
-}
-/* ---------------------------------------------------- */
-
 p, ul, ol{
 	font-size: .8rem ;
 	letter-spacing: 3px;
 }
 
 label,a {
-   font-size: 0.8rem;
+   font-size: .9rem;
    letter-spacing: 3px;
    margin: 0.5rem 1rem;
 }
 
 input[type='submit'],
 button {
-   margin: 1rem;
-   text-transform: uppercase;
    background: none;
-   border: 1px solid var(--text-col);
-   font-size: 1rem;
-   font-weight: 300;
-   padding: 1rem 2rem;
+   font-size: .9rem;
    cursor: pointer;
 }
 
-input[type='submit']:hover,
-input[type='text']:focus,
-button:hover {
-   transition: 0.3s ease-in-out;
-}
 
 input[type='text'], textarea {
    padding: 0.5rem;
    min-width: 250px;
-   border: 1px solid var(--text-col);
    font-size: 0.7rem;
    letter-spacing: 2px;
-   text-transform: capitalize;
    background: none;
    transition: 0.3s ease-in-out;
    cursor: pointer;
    border-radius: 3px;
 	margin: 0.5rem;
 }
-
 
 .visible {
 	opacity: 1;
@@ -92,5 +65,16 @@ input[type='text'], textarea {
    pointer-events: none;
    position: absolute;
    transition: 0.3s opacity ease-in-out;
+}
+
+::-webkit-scrollbar {
+   height: 80%;
+   width: 2px;
+   background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+   border-radius: 25%;
+   background-color: var(--text-col);
 }
 
