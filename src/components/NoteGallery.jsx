@@ -2,9 +2,8 @@ import React, {useState} from 'react';
 import {Note, NoteFull} from '.';
 import '../styles/note.css';
 
-const NoteGallery = ({notes, onEdit, onDelete, setEditedNote, setIsEdited, setOpenForm}) => {
-   const [seletedNote, setSeletedNote] = useState('');
-   const [openNote, setOpenNote] = useState(false);
+const NoteGallery = ({notes, onEdit, onDelete, setEditedNote, setIsEdited, setOpenForm, setSeletedNote, setOpenNote}) => {
+
 
    const handleItemClick = (item) => {
       setSeletedNote(item);
@@ -27,16 +26,7 @@ const NoteGallery = ({notes, onEdit, onDelete, setEditedNote, setIsEdited, setOp
                </div>
             ))}
 
-            <NoteFull
-               isOpened={openNote}
-               setIsOpened={setOpenNote}
-               note={seletedNote}
-               onEdit={onEdit}
-               onDelete={onDelete}
-               setEditedNote={setEditedNote}
-               setIsEdited={setIsEdited}
-               setOpenForm={setOpenForm}
-            />
+          
          </div>
       </>
    );

@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {AddForm, NoteGallery, Background, Sidebar} from './components';
+import {AddForm, NoteGallery, Background, Sidebar, NoteFull} from './components';
 
 function App() {
    const [notes, setNotes] = useState(localStorage.notes ? JSON.parse(localStorage.notes) : []);
@@ -8,6 +8,9 @@ function App() {
 
    const [isEdited, setIsEdited] = useState(false);
    const [editedNote, setEditedNote] = useState('');
+
+   const [seletedNote, setSeletedNote] = useState('');
+   const [openNote, setOpenNote] = useState(false);
 
    const [darkMode, setDarkMode] = useState(false);
 
@@ -72,33 +75,48 @@ function App() {
    };
 
    return (
-      <> <div className={darkMode ? 'dark-mode' : ''}>
-         <Background />
+      <>
+         {' '}
+         <div className={darkMode ? 'dark-mode' : ''}>
+            <Background />
 
-         <Sidebar
-            setOpenForm={setOpenForm}
-            setDarkMode={setDarkMode}
-            darkMode={darkMode}
-         />
+            <Sidebar
+               setOpenForm={setOpenForm}
+               setDarkMode={setDarkMode}
+               darkMode={darkMode}
+            />
 
-         <AddForm
-            addNote={addNote}
-            isOpened={openForm}
-            setIsOpened={setOpenForm}
-            setEditedNote={setEditedNote}
-            editedNote={editedNote}
-            isEdited={isEdited}
-            setIsEdited={setIsEdited}
-            onEdit={editNote}
-         />
-         <NoteGallery
-            notes={notes}
-            onEdit={editNote}
-            onDelete={deleteNote}
-            setEditedNote={setEditedNote}
-            setIsEdited={setIsEdited}
-            setOpenForm={setOpenForm}
-         />
+            <AddForm
+               addNote={addNote}
+               isOpened={openForm}
+               setIsOpened={setOpenForm}
+               setEditedNote={setEditedNote}
+               editedNote={editedNote}
+               isEdited={isEdited}
+               setIsEdited={setIsEdited}
+               onEdit={editNote}
+            />
+            <NoteGallery
+               notes={notes}
+               onEdit={editNote}
+               onDelete={deleteNote}
+               setEditedNote={setEditedNote}
+               setIsEdited={setIsEdited}
+               setOpenForm={setOpenForm}
+               setSeletedNote={setSeletedNote}
+               setOpenNote={setOpenNote}
+            />
+
+            <NoteFull
+               isOpened={openNote}
+               setIsOpened={setOpenNote}
+               note={seletedNote}
+               onEdit={editNote}
+               onDelete={deleteNote}
+               setEditedNote={setEditedNote}
+               setIsEdited={setIsEdited}
+               setOpenForm={setOpenForm}
+            />
          </div>
       </>
    );
