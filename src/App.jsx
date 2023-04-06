@@ -1,6 +1,9 @@
 import {useEffect, useState} from 'react';
 import {AddForm, NoteGallery, Background, Sidebar} from './components';
 
+import './styles/style.css'
+
+
 function App() {
    const [notes, setNotes] = useState(localStorage.notes ? JSON.parse(localStorage.notes) : []);
 

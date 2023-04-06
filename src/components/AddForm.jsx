@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import uuid from 'react-uuid';
 
-import '../styles/add-form.css';
+import '../styles/style.css';
 
 const AddForm = ({addNote, isOpened, setIsOpened, setEditedNote, editedNote, isEdited, setIsEdited, onEdit}) => {
    const [title, setTitle] = useState('');
