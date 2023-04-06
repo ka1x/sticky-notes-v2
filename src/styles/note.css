@@ -18,7 +18,7 @@
 }
 
 .note {
-    box-sizing: border-box;
+   box-sizing: border-box;
    display: flex;
    flex-direction: column;
    align-items: flex-start;
@@ -64,7 +64,6 @@
 .note .note-header-container .note-title {
    font-size: 1rem;
    color: var(--text-dark);
-
 }
 .note .note-header-container .line {
    border-bottom: 2px solid var(--text-col);

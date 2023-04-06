@@ -3,7 +3,6 @@ import uuid from 'react-uuid';
 
 import '../styles/window.css';
 
-
 const AddForm = ({addNote, isOpened, setIsOpened, setEditedNote, editedNote, isEdited, setIsEdited, onEdit}) => {
    const [title, setTitle] = useState('');
    const [content, setContent] = useState('');
@@ -63,28 +62,35 @@ const AddForm = ({addNote, isOpened, setIsOpened, setEditedNote, editedNote, isE
 
    return (
       <div className={isOpened ? 'window window-visible-animate' : 'window window-hidden-animate '}>
+         <div className='window-content'>
+            <p
+               className='form-close'
+               onClick={() => handleClose()}
+            >
+               <i class='fa-solid fa-xmark'></i>
+            </p>
+            <form
+               onSubmit={handleSubmit}
+               className='add-note-form'
+            >
+               <label htmlFor='title'>Title:</label>
+               <input
+                  type='text'
+                  id='title'
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
+               />
 
-         <div className="window-content">
-         <p className='form-close' onClick={() => handleClose()}><i class="fa-solid fa-xmark"></i></p>
-         <form onSubmit={handleSubmit} className='add-note-form'>
-            <label htmlFor='title'>Title:</label>
-            <input
-               type='text'
-               id='title'
-               value={title}
-               onChange={(e) => setTitle(e.target.value)}
-            />
+               <label htmlFor='content'>Content:</label>
+               <textarea
+                  id='content'
+                  value={content}
+                  onChange={(e) => setContent(e.target.value)}
+                  rows={10}
+               ></textarea>
 
-            <label htmlFor='content'>Content:</label>
-            <textarea
-               id='content'
-               value={content}
-               onChange={(e) => setContent(e.target.value)}
-               rows={10}
-            ></textarea>
-
-            <button type='submit'>{isEdited ? 'Save Changes' : 'Add Note'}</button>
-         </form>
+               <button type='submit'>{isEdited ? 'Save Changes' : 'Add Note'}</button>
+            </form>
          </div>
       </div>
    );

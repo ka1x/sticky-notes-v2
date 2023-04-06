@@ -21,12 +21,10 @@ function App() {
 
    //creating note to add
    const createNote = (item) => {
-      const date = new Date();
-
       const newNote = {
          title: item.title,
          content: item.content,
-         date: isEdited ? editedNote.date : date,
+         date: isEdited ? editedNote.date : new Date(),
          id: item.id,
       };
 

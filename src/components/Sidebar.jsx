@@ -35,7 +35,8 @@ const Sidebar = ({setOpenForm, darkMode, setDarkMode, setNotes}) => {
 
    const handleImportClick = () => {
       if (window.confirm('Do you want to import notes? This will replace any existing notes')) {
-      fileInputRef.current.click();}
+         fileInputRef.current.click();
+      }
    };
 
    return (
@@ -45,23 +46,23 @@ const Sidebar = ({setOpenForm, darkMode, setDarkMode, setNotes}) => {
                <i class='fa-solid fa-plus'></i>
             </button>
 
-            <button onClick={()=>handleDeleteAlll()}>
+            <button onClick={() => handleDeleteAlll()}>
                <i class='fa-solid fa-trash'></i>{' '}
             </button>
 
             {/* <button onClick={() => setDarkMode(!darkMode)}>{darkMode ? <i class='fa-solid fa-sun'></i> : <i class='fa-solid fa-moon'></i>}</button> */}
 
-            <button onClick={()=>exportDataToFile()}>
+            <button onClick={() => exportDataToFile()}>
                <i class='fa-solid fa-download'></i>
             </button>
 
             <input
-            type='file'
-            ref={fileInputRef}
-            style={{display: 'none'}}
-            onChange={handleFileChange}
-         />
-            <button onClick={()=>handleImportClick()}>
+               type='file'
+               ref={fileInputRef}
+               style={{display: 'none'}}
+               onChange={handleFileChange}
+            />
+            <button onClick={() => handleImportClick()}>
                <i class='fa-solid fa-upload'></i>
             </button>
          </div>

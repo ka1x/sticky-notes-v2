@@ -4,13 +4,12 @@
    top: 50%;
    left: 0;
    transform: translateY(-50%);
-   
 
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	align-items: center;
-	gap: 20px;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   gap: 20px;
    z-index: 2;
 }
 
@@ -21,18 +20,17 @@
    outline: none;
    border: none;
    padding: 0;
-	margin: 0;
-	transform: translateX(-10px);
-	
-	color: var(--text-col);
-	background:var(--gradient-1);
+   margin: 0;
+   transform: translateX(-10px);
+
+   color: var(--text-col);
+   background: var(--gradient-1);
    border-radius: 0 40px 40px 0;
    border: 1px solid var(--text-col);
    box-shadow: 2px 2px 0px var(--text-col);
 }
 
-
-.nav button:hover i{
-	transform: translateX(2px);
-	transition: .2s linear all;
+.nav button:hover i {
+   transform: translateX(2px);
+   transition: 0.2s linear all;
 }

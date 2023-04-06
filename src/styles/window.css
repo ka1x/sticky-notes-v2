@@ -72,8 +72,7 @@
    width: 75%;
    border: 1px solid var(--text-col);
    box-shadow: 2px 2px 0px var(--text-col);
-   padding: .7rem;
-   
+   padding: 0.7rem;
 }
 
 /* -------------------------------------------- */
@@ -89,7 +88,7 @@
 }
 .note-full .title {
    font-size: 1.5rem;
-   margin: 1rem .4rem;
+   margin: 1rem 0.4rem;
 }
 
 .note-full .line {
@@ -100,7 +99,7 @@
 
 .note-full .content {
    overflow-y: scroll;
-   padding: .5rem 2rem;
+   padding: 0.5rem 2rem;
    height: 100%;
 }
 
@@ -111,7 +110,7 @@
    justify-content: flex-end;
 }
 
-.note-full .icons i{
+.note-full .icons i {
    cursor: pointer;
 }
 
