@@ -27,7 +27,7 @@
    /* border: 3px solid var(--white3); */
    border: 1px solid var(--text-col);
    box-shadow: 2px 2px 0px var(--text-col);
-   padding: 3rem;
+   padding: 1rem;
    color: var(--text-col);
 }
 .window-visible-animate {
@@ -57,4 +57,19 @@
    border-radius: 20px;
    padding: .5rem 1rem;
    letter-spacing: 3px;
+   box-shadow: 2px 2px 0px var(--text-col);
+
+}
+
+.add-note-form textarea, .add-note-form input[type="text"] {
+
+   width: 75%;
+   box-shadow: 2px 2px 0px var(--text-col);
+
+}
+
+.form-close{
+font-size: 1rem;
+   margin: .5rem;
+   cursor: pointer;
 }

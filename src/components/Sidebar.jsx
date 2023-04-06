@@ -1,17 +1,28 @@
-import React from 'react'
-import '../styles/sidebar.css'
+import React from 'react';
+import '../styles/sidebar.css';
 
 const Sidebar = ({setOpenForm}) => {
-  return (
-	 
-	 <>
-	  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg> 
-	 <div className='nav'>
+   const handleAddclick = () => {
+      setOpenForm(true);
+   };
 
-	  <button onClick={() => setOpenForm(true)}>add note</button>
-	 </div>
-	 </>
-  )
-}
+   return (
+      <>
+         <div className='nav'>
+            <button onClick={() => handleAddclick()}>
+               <i class='fa-solid fa-plus'></i>
+            </button>
 
-export default Sidebar
+            <button>
+               <i class='fa-solid fa-download'></i>{' '}
+            </button>
+
+            <button>
+               <i class='fa-solid fa-upload'></i>{' '}
+            </button>
+         </div>
+      </>
+   );
+};
+
+export default Sidebar;

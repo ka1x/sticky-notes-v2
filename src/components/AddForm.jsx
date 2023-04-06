@@ -64,7 +64,7 @@ const AddForm = ({addNote, isOpened, setIsOpened, setEditedNote, editedNote, isE
       <div className={isOpened ? 'window window-visible-animate' : 'window window-hidden-animate '}>
 
          <div className="window-content">
-         <p onClick={() => handleClose()}>X</p>
+         <p className='form-close' onClick={() => handleClose()}><i class="fa-solid fa-xmark"></i></p>
          <form onSubmit={handleSubmit} className='add-note-form'>
             <label htmlFor='title'>Title:</label>
             <input
@@ -79,6 +79,7 @@ const AddForm = ({addNote, isOpened, setIsOpened, setEditedNote, editedNote, isE
                id='content'
                value={content}
                onChange={(e) => setContent(e.target.value)}
+               rows={4}
             ></textarea>
 
             <button type='submit'>{isEdited ? 'Save Changes' : 'Add Note'}</button>
