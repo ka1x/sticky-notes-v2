@@ -2,6 +2,12 @@
 
 :root {
    --text-col: rgb(56, 57, 133);
+   
+
+   --white3: rgba(255, 255, 255, 0.3);
+   --white7: rgba(255, 255, 255, 0.7);
+
+   --gradient-1: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3)); 
 }
 
 * {
@@ -70,7 +76,7 @@ button {
    margin: 1rem;
    text-transform: uppercase;
    background: none;
-   border: 1px solid black;
+   border: 1px solid var(--text-col);
    font-size: 1rem;
    font-weight: 300;
    padding: 1rem 2rem;
@@ -87,7 +93,7 @@ button:hover {
 input[type='text'], textarea {
    padding: 0.5rem;
    min-width: 250px;
-   border: 1px solid black;
+   border: 1px solid var(--text-col);
    font-size: 0.7rem;
    letter-spacing: 2px;
    text-transform: capitalize;
@@ -134,10 +140,4 @@ select {
 }
 
 /* -------------------------------------------- */
-
-.window{
-   border: 1px solid black;
-	padding: 1rem;
-   z-index: 99;
-}
 

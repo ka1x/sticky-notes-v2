@@ -61,9 +61,11 @@ const AddForm = ({addNote, isOpened, setIsOpened, setEditedNote, editedNote, isE
    };
 
    return (
-      <div className={isOpened ? 'window visible' : 'window hidden'}>
+      <div className={isOpened ? 'window window-visible-animate' : 'window window-hidden-animate '}>
+
+         <div className="window-content">
          <p onClick={() => handleClose()}>X</p>
-         <form onSubmit={handleSubmit}>
+         <form onSubmit={handleSubmit} className='add-note-form'>
             <label htmlFor='title'>Title:</label>
             <input
                type='text'
@@ -81,6 +83,7 @@ const AddForm = ({addNote, isOpened, setIsOpened, setEditedNote, editedNote, isE
 
             <button type='submit'>{isEdited ? 'Save Changes' : 'Add Note'}</button>
          </form>
+         </div>
       </div>
    );
 };
