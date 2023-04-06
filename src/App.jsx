@@ -14,31 +14,44 @@ function App() {
       localStorage.setItem('notes', JSON.stringify(notes));
    }, [notes]);
 
-   //creates new note
-   const createNew = (item) => {
-      if (isEdited) {
-         const newNote = {
-            title: item.title,
-            content: item.content,
-            date: editedNote.date,
-            id: item.id,
-         };
-         return newNote;
-      } else {
-         const date = new Date();
-         const newNote = {
-            title: item.title,
-            content: item.content,
-            date: date,
-            id: item.id,
-         };
-         return newNote;
-      }
+   // //creates new note
+   // const createNew = (item) => {
+   //    if (isEdited) {
+   //       const newNote = {
+   //          title: item.title,
+   //          content: item.content,
+   //          date: editedNote.date,
+   //          id: item.id,
+   //       };
+   //       return newNote;
+   //    } else {
+   //       const date = new Date();
+   //       const newNote = {
+   //          title: item.title,
+   //          content: item.content,
+   //          date: date,
+   //          id: item.id,
+   //       };
+   //       return newNote;
+   //    }
+   // };
+
+   const createNote = (item) => {
+      const date = new Date();
+
+      const newNote = {
+         title: item.title,
+         content: item.content,
+         date: isEdited ? editedNote.date : date,
+         id: item.id,
+      };
+      
+      return newNote;
    };
 
    // adds new note to notes
    const addNote = (item) => {
-      const newNote = createNew(item);
+      const newNote = createNote(item);
       setNotes([newNote, ...notes]);
    };
 
@@ -51,7 +64,7 @@ function App() {
 
    // edit item
    const editNote = (item) => {
-      const newNote = createNew(item);
+      const newNote = createNote(item);
       const updatedNotews = notes.filter((a) => a.id !== item.id);
       setNotes([...updatedNotews, newNote]);
    };
@@ -60,8 +73,7 @@ function App() {
       <>
          <Background />
 
-<Sidebar setOpenForm={setOpenForm}/>
-        
+         <Sidebar setOpenForm={setOpenForm} />
 
          <AddForm
             addNote={addNote}
