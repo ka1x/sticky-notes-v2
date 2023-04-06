@@ -14,6 +14,10 @@ const NoteGallery = ({notes, onEdit, onDelete, setEditedNote, setIsEdited, setOp
    return (
       <>
          <div className='note-gallery'>
+           
+         { (notes.length === 0) ? <> <h2>No notes yet</h2></> :
+            <>
+           
             {notes
             .sort((a, b) => new Date(b.date) - new Date(a.date))
             .map((item, i) => (
@@ -25,6 +29,7 @@ const NoteGallery = ({notes, onEdit, onDelete, setEditedNote, setIsEdited, setOp
                   <Note note={item}></Note>
                </div>
             ))}
+             </>}
 
           
          </div>

@@ -1,21 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 
 :root {
-  
-   --text-col:#4c3460;
-   --bg-col:rgb(162, 143, 166);
+   --text-col: #4c3460;
+   --text-dark: #38204d;
+   --bg-col: rgb(162, 143, 166);
 
    --white2: rgba(255, 255, 255, 0.2);
    --white3: rgba(255, 255, 255, 0.3);
    --white4: rgba(255, 255, 255, 0.4);
    --white7: rgba(255, 255, 255, 0.7);
 
-   --gradient-1: linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1)); 
+   --gradient-1: linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
 }
 
-.dark-mode{
+/* .dark-mode {
+   --text-col: #d0d0d0;
+   --bg-col: rgb(43, 39, 43);
 
-}
+   --white2: rgba(255, 255, 255, 0.1);
+   --white3: rgba(255, 255, 255, 0.1);
+   --white4: rgba(255, 255, 255, 0.1);
+   --white7: rgba(46, 43, 47, 0.7);
+
+   --gradient-1: linear-gradient(to right bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+} */
 
 * {
    margin: 0;
@@ -29,14 +37,31 @@ html {
    width: 100%;
    min-height: 100vh;
 }
-
-p, ul, ol{
-	font-size: .8rem ;
-	letter-spacing: 3px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   
+   text-transform: uppercase;
+   letter-spacing: 5px;
+   margin: 0.5rem 1rem;
+   margin-top: 5rem;
+   font-weight: 400;
+   color: var(--text-dark);
 }
 
-label,a {
-   font-size: .9rem;
+p,
+ul,
+ol {
+   font-size: 0.8rem;
+   letter-spacing: 3px;
+}
+
+label,
+a {
+   font-size: 0.9rem;
    letter-spacing: 3px;
    margin: 0.5rem 1rem;
 }
@@ -44,12 +69,12 @@ label,a {
 input[type='submit'],
 button {
    background: none;
-   font-size: .9rem;
+   font-size: 0.9rem;
    cursor: pointer;
 }
 
-
-input[type='text'], textarea {
+input[type='text'],
+textarea {
    padding: 0.5rem;
    min-width: 250px;
    font-size: 0.7rem;
@@ -58,12 +83,12 @@ input[type='text'], textarea {
    transition: 0.3s ease-in-out;
    cursor: pointer;
    border-radius: 3px;
-	margin: 0.5rem;
+   margin: 0.5rem;
 }
 
 .visible {
-	opacity: 1;
-	pointer-events: all;
+   opacity: 1;
+   pointer-events: all;
    transition: 0.3s ease-in-out;
 }
 
@@ -84,4 +109,3 @@ input[type='text'], textarea {
    border-radius: 25%;
    background-color: var(--text-col);
 }
-

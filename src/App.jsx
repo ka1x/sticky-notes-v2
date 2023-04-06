@@ -19,28 +19,7 @@ function App() {
       localStorage.setItem('notes', JSON.stringify(notes));
    }, [notes]);
 
-   // //creates new note
-   // const createNew = (item) => {
-   //    if (isEdited) {
-   //       const newNote = {
-   //          title: item.title,
-   //          content: item.content,
-   //          date: editedNote.date,
-   //          id: item.id,
-   //       };
-   //       return newNote;
-   //    } else {
-   //       const date = new Date();
-   //       const newNote = {
-   //          title: item.title,
-   //          content: item.content,
-   //          date: date,
-   //          id: item.id,
-   //       };
-   //       return newNote;
-   //    }
-   // };
-
+   //creating note to add
    const createNote = (item) => {
       const date = new Date();
 
@@ -84,6 +63,7 @@ function App() {
                setOpenForm={setOpenForm}
                setDarkMode={setDarkMode}
                darkMode={darkMode}
+               setNotes={setNotes}
             />
 
             <AddForm

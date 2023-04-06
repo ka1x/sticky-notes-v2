@@ -58,11 +58,12 @@
 }
 .note .note-header-container .note-date {
    font-size: 10px;
-   color: var(--text-light);
+   color: var(--text-dark);
 }
 
 .note .note-header-container .note-title {
    font-size: 1rem;
+   color: var(--text-dark);
 
 }
 .note .note-header-container .line {
