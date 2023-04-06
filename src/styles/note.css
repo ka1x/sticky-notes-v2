@@ -22,49 +22,58 @@
 }
 
 .note {
-	min-width: 200px;
-	width: 25%;
-	height: 250px;
-	padding: 1rem 2rem;
-	position: relative;
+   min-width: 200px;
+   width: 25%;
+   height: 250px;
+   padding: 1rem 2rem;
+   position: relative;
 
-	display: flex;
-	align-items: flex-start;
-	flex-direction: column;
-	justify-content: space-around;
-	gap: 10px;
+   display: flex;
+   align-items: flex-start;
+   flex-direction: column;
+   justify-content: space-around;
+   gap: 10px;
 
-	color: rgb(56, 57, 133);
+   color: rgb(56, 57, 133);
 
-	/* overflow-y: scroll; */
-	/* background: rgba(255, 255, 255, 0.375);
+   /* overflow-y: scroll; */
+   /* background: rgba(255, 255, 255, 0.375);
 	box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
 	border-radius: 1.5rem;
 	border: 1px solid rgba(255, 255, 255, 0.125); */
-	
-	background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
-	border-radius: 1.2rem;
-	flex: 1;
-	backdrop-filter: blur(2rem);
- }
- 
-.note .note-content-container{
-	width: 100%;
-}
-.note .note-content{
-	
-	/* this prevents text from overflowing the note */
-	word-wrap: break-word;
 
+   background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+   border-radius: 1.2rem;
+   flex: 1;
+   backdrop-filter: blur(2rem);
 }
 
+.note .note-content-container {
+   width: 100%;
+}
+.note .note-content {
+   /* this prevents text from overflowing the note */
+   word-wrap: break-word;
+}
 
- 
- /* ---------------------------------------- */
-.note .line{
-	border: 3px solid rgba(255, 255, 255, 0.7);
-	border-radius: 0 25% 25% 0;
-	width: 33%;
-	position: relative;
+/* ---------------------------------------- */
 
+.note .note-header-container {
+	display: flex;
+	gap: 10px;
+	flex-direction: column;
+}
+.note .note-header-container .note-date {
+   font-size: 0.7rem;
+   letter-spacing: 5px;
+}
+
+.note .note-header-container .note-title {
+   font-size: 1.5rem;
+}
+.note .note-header-container .line {
+   border-bottom: 5px solid rgba(255, 255, 255, 0.7);
+   border-radius: 0 25% 25% 0;
+   width: 33%;
+   position: relative;
 }
