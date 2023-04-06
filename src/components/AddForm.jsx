@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import uuid from 'react-uuid';
 
-import '../styles/style.css';
+import '../styles/window.css';
+
 
 const AddForm = ({addNote, isOpened, setIsOpened, setEditedNote, editedNote, isEdited, setIsEdited, onEdit}) => {
    const [title, setTitle] = useState('');
@@ -79,7 +80,7 @@ const AddForm = ({addNote, isOpened, setIsOpened, setEditedNote, editedNote, isE
                id='content'
                value={content}
                onChange={(e) => setContent(e.target.value)}
-               rows={4}
+               rows={10}
             ></textarea>
 
             <button type='submit'>{isEdited ? 'Save Changes' : 'Add Note'}</button>

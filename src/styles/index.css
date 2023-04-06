@@ -45,10 +45,8 @@ button {
 input[type='text'], textarea {
    padding: 0.5rem;
    min-width: 250px;
-   border: 1px solid var(--text-col);
    font-size: 0.7rem;
    letter-spacing: 2px;
-   text-transform: capitalize;
    background: none;
    transition: 0.3s ease-in-out;
    cursor: pointer;
@@ -68,16 +66,15 @@ input[type='text'], textarea {
    position: absolute;
    transition: 0.3s opacity ease-in-out;
 }
-/* 
+
 ::-webkit-scrollbar {
    height: 80%;
-   width: 10px;
+   width: 2px;
    background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-   border-radius: 20px;
-   height: 5px;
-   background-color: rgba(255, 255, 255, 0.5);
-} */
+   border-radius: 25%;
+   background-color: var(--text-col);
+}
 

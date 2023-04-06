@@ -1,8 +1,6 @@
 import {useEffect, useState} from 'react';
 import {AddForm, NoteGallery, Background, Sidebar} from './components';
 
-import './styles/style.css'
-
 
 function App() {
    const [notes, setNotes] = useState(localStorage.notes ? JSON.parse(localStorage.notes) : []);
@@ -71,6 +69,9 @@ function App() {
       const updatedNotews = notes.filter((a) => a.id !== item.id);
       setNotes([...updatedNotews, newNote]);
    };
+
+
+   
 
    return (
       <>

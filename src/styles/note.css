@@ -1,12 +1,7 @@
 .note-gallery {
-   /* width: 80%; */
-   /* height: 80%; */
    width: 90%;
    height: 100%;
    position: absolute;
-   /* left: 52%; */
-   /* top: 50%; */
-   /* transform: translate(-50%, -50%); */
    right: 0;
    top: 50%;
    transform: translateY(-50%);
@@ -16,19 +11,13 @@
    align-content: flex-start;
    justify-content: center;
    gap: 2rem;
-
-   /* background: rgba(255, 255, 255, 0.3); */
    padding: 5% 0;
    border-radius: 20px;
    overflow-y: scroll;
 }
 
 .note {
-   /* Type=To Do */
-
-   box-sizing: border-box;
-
-   /* Auto layout */
+    box-sizing: border-box;
    display: flex;
    flex-direction: column;
    align-items: flex-start;
@@ -36,11 +25,9 @@
    padding: 15px;
    gap: 10px;
    isolation: isolate;
-   
 
    width: 300px;
    height: 250px;
-
    background: rgba(255, 255, 255, 0.2);
    backdrop-filter: blur(10px);
    border: 1px solid var(--text-col);
@@ -77,7 +64,6 @@
 
 }
 .note .note-header-container .line {
-   /* border-bottom: 3px solid rgba(255, 255, 255, 0.7); */
    border-bottom: 2px solid var(--text-col);
    border-radius: 0 25% 25% 0;
    width: 66%;
@@ -102,65 +88,3 @@
    transition: transform 1s;
    transition-delay: 0.2s;
 }
-
-/* 
-@keyframes moveRight10 {
-   0% {
-      transform: translateX(0);
-   }
-
-   100% {
-      transform: translateX(10px);
-   }
-}
-
-@keyframes moveLeft10 {
-   0% {
-      transform: translateX(0);
-   }
-
-   100% {
-      transform: translateX(-10px);
-   }
-} */
-
-/* ----------------------------------- */
-/* media queries */
-/* 
-@media screen and (max-width: 890px) {
-   .note {
-      height: 250px;
-   }
-
-   .note .note-header-container .note-title {
-      font-size: 1.3rem;
-   }
-}
-@media screen and (max-width: 738px) {
-   .note {
-      height: 200px;
-   }
-}
-
-@media screen and (max-width: 477px) {
-   .note-gallery {
-      padding: 10% 5%;
-   }
-
-   .note {
-      height: 200px;
-   }
-}
-@media screen and (max-width: 370px) {
-
-	
-   .note {
-      height: 250px;
-   }
-}@media screen and (max-width: 320px) {
-
-	
-   .note {
-      height: 300px;
-   }
-} */
