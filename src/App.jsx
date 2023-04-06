@@ -1,7 +1,6 @@
 import {useEffect, useState} from 'react';
 import {AddForm, NoteGallery, Background, Sidebar} from './components';
 
-
 function App() {
    const [notes, setNotes] = useState(localStorage.notes ? JSON.parse(localStorage.notes) : []);
 
@@ -9,6 +8,8 @@ function App() {
 
    const [isEdited, setIsEdited] = useState(false);
    const [editedNote, setEditedNote] = useState('');
+
+   const [darkMode, setDarkMode] = useState(false);
 
    // saving in local storgae
    useEffect(() => {
@@ -46,7 +47,7 @@ function App() {
          date: isEdited ? editedNote.date : date,
          id: item.id,
       };
-      
+
       return newNote;
    };
 
@@ -70,14 +71,15 @@ function App() {
       setNotes([...updatedNotews, newNote]);
    };
 
-
-   
-
    return (
-      <>
+      <> <div className={darkMode ? 'dark-mode' : ''}>
          <Background />
 
-         <Sidebar setOpenForm={setOpenForm} />
+         <Sidebar
+            setOpenForm={setOpenForm}
+            setDarkMode={setDarkMode}
+            darkMode={darkMode}
+         />
 
          <AddForm
             addNote={addNote}
@@ -97,6 +99,7 @@ function App() {
             setIsEdited={setIsEdited}
             setOpenForm={setOpenForm}
          />
+         </div>
       </>
    );
 }

@@ -28,7 +28,8 @@
 
    width: 300px;
    height: 250px;
-   background: rgba(255, 255, 255, 0.2);
+   /* background: var(--white2); */
+   background: var(--gradient-1);
    backdrop-filter: blur(10px);
    border: 1px solid var(--text-col);
    box-shadow: 2px 2px 0px var(--text-col);

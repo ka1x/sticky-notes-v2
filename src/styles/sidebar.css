@@ -24,7 +24,7 @@
 	transform: translateX(-10px);
 	
 	color: var(--text-col);
-	background: rgba(255, 255, 255, 0.3);
+	background:var(--gradient-1);
    border-radius: 0 40px 40px 0;
    border: 1px solid var(--text-col);
    box-shadow: 2px 2px 0px var(--text-col);

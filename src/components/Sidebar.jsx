@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/sidebar.css';
 
-const Sidebar = ({setOpenForm}) => {
+const Sidebar = ({setOpenForm, darkMode, setDarkMode}) => {
    const handleAddclick = () => {
       setOpenForm(true);
    };
@@ -14,12 +14,10 @@ const Sidebar = ({setOpenForm}) => {
             </button>
 
             <button>
-               <i class='fa-solid fa-download'></i>{' '}
+               <i class='fa-solid fa-trash'></i>{' '}
             </button>
 
-            <button>
-               <i class='fa-solid fa-upload'></i>{' '}
-            </button>
+            <button onClick={() => setDarkMode(!darkMode)}>{darkMode ? <i class='fa-solid fa-sun'></i> : <i class='fa-solid fa-moon'></i>}</button>
          </div>
       </>
    );
