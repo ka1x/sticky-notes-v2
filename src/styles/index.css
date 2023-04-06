@@ -37,37 +37,12 @@ body{
 }
 /* ---------------------------------------------------- */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-   text-transform: uppercase;
-   letter-spacing: 4px;
-   margin: 0.5rem 1rem;
-}
-
-h1 {
-   font-weight: 200;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-   font-weight: 400;
-}
-
-
 p, ul, ol{
 	font-size: .8rem ;
 	letter-spacing: 3px;
 }
 
 label,a {
-   text-transform: uppercase;
    font-size: 0.8rem;
    letter-spacing: 3px;
    margin: 0.5rem 1rem;
@@ -89,7 +64,6 @@ input[type='submit']:hover,
 input[type='text']:focus,
 button:hover {
    transition: 0.3s ease-in-out;
-   /* background-color: var(--accent-col); */
 }
 
 input[type='text'], textarea {
@@ -106,15 +80,6 @@ input[type='text'], textarea {
 	margin: 0.5rem;
 }
 
-select {
-   border: none;
-   padding: 0.5rem;
-   min-width: 15rem;
-   letter-spacing: 2px;
-   text-transform: capitalize;
-   background: none;
-   cursor: pointer;
-}
 
 .visible {
 	opacity: 1;
@@ -128,18 +93,4 @@ select {
    position: absolute;
    transition: 0.3s opacity ease-in-out;
 }
-
-::-webkit-scrollbar {
-   height: 80%;
-   width: 10px;
-   background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-   border-radius: 20px;
-   height: 5px;
-   background-color: rgba(255, 255, 255, 0.5);
-}
-
-/* -------------------------------------------- */
 

@@ -1,29 +1,5 @@
-/* .nav {
-   height: 75%;
-   position: fixed;
-   top: 50%;
-   left: 0;
-   transform: translateY(-50%);
-   background: rgba(255, 255, 255, 0.3);
-   border-radius: 0 40px 40px 0;
-   border: 1px solid var(--text-col);
-   box-shadow: 2px 2px 0px var(--text-col);
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
 
-.nav button {
-   border-radius: 50%;
-   width: 45px;
-   height: 45px;
-   outline: none;
-   border: none;
-   padding: 0;
-   margin: 0.8rem;
-	color: var(--text-col);
-} */
 .nav {
    height: 75%;
    position: fixed;
