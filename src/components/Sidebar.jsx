@@ -14,9 +14,13 @@ const Sidebar = ({setOpenForm, darkMode, setDarkMode, setNotes}) => {
    };
 
    const exportDataToFile = () => {
+
+      if (window.confirm('Save backup of your notes to your device?')) {
       const data = localStorage.getItem('notes');
       const blob = new Blob([JSON.stringify(data)], {type: 'application/json'});
       saveAs(blob, 'notes.json');
+
+      }
    };
 
    //importing data from file
