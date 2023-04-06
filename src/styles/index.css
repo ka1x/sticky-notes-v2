@@ -3,7 +3,8 @@
 :root {
    --text-col: #4c3460;
    --text-dark: #38204d;
-   --bg-col: rgb(162, 143, 166);
+   /* --bg-col: rgb(162, 143, 166); */
+   --bg-col:linear-gradient( 109.6deg,  rgba(177,173,219,1) 11.2%, rgba(245,226,226,1) 91.1% ) ;
 
    --white2: rgba(255, 255, 255, 0.2);
    --white3: rgba(255, 255, 255, 0.3);
