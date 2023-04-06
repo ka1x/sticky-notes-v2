@@ -1,0 +1,22 @@
+
+
+.nav{
+	height: 80%;
+	position: fixed;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	background: white;
+	border-radius: 0 40px 40px 0;
+}
+
+.nav button{
+	border-radius: 50%;
+	width: 35px;
+	height: 45px;
+	outline: none;
+	border: none;
+	padding: 0;
+	margin: .8rem;
+	background-color: white;
+}

@@ -3,7 +3,7 @@ import uuid from 'react-uuid';
 
 import '../styles/add-form.css';
 
-const AddForm = ({addNote, isOpened, setIsOpened, setEditedNote, editedNote, isEdited, setIsEdited,onEdit}) => {
+const AddForm = ({addNote, isOpened, setIsOpened, setEditedNote, editedNote, isEdited, setIsEdited, onEdit}) => {
    const [title, setTitle] = useState('');
    const [content, setContent] = useState('');
 
@@ -18,36 +18,51 @@ const AddForm = ({addNote, isOpened, setIsOpened, setEditedNote, editedNote, isE
       passEditData();
    }, [isEdited, editedNote]);
 
+   // const handleSubmit = (e) => {
+   //    e.preventDefault();
+
+   //    if (isEdited) {
+   //       const id = editedNote.id;
+   //       onEdit({id, content, title});
+   //    } else {
+   //       //if adding new
+   //       const id = uuid();
+   //       addNote({id, content, title});
+   //    }
+
+   //    handleClose();
+   // };
    const handleSubmit = (e) => {
       e.preventDefault();
 
+      const note = {
+         id: isEdited ? editedNote.id : uuid(),
+         title,
+         content,
+      };
+
       if (isEdited) {
-         const id = editedNote.id;
-         onEdit({id, content, title});
+         onEdit(note);
       } else {
-         //if adding new
-         const id = uuid();
-         addNote({id, content, title});
+         addNote(note);
       }
 
       handleClose();
    };
 
    const handleClose = () => {
-
       if (isEdited) {
-         setIsEdited(false)
-         setEditedNote('')
+         setIsEdited(false);
+         setEditedNote('');
       }
-
-      setContent('')
-      setTitle('')
+      setContent('');
+      setTitle('');
       setIsOpened(false);
-   }
+   };
 
    return (
       <div className={isOpened ? 'window visible' : 'window hidden'}>
-         <p onClick={()=>handleClose()}>X</p>
+         <p onClick={() => handleClose()}>X</p>
          <form onSubmit={handleSubmit}>
             <label htmlFor='title'>Title:</label>
             <input

@@ -136,4 +136,6 @@ select {
 .window{
    border: 1px solid black;
 	padding: 1rem;
+   z-index: 99;
 }
+

@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {AddForm, NoteGallery} from './components';
+import {AddForm, NoteGallery, Background, Sidebar} from './components';
 
 function App() {
    const [notes, setNotes] = useState(localStorage.notes ? JSON.parse(localStorage.notes) : []);
@@ -22,7 +22,6 @@ function App() {
             content: item.content,
             date: editedNote.date,
             id: item.id,
-            
          };
          return newNote;
       } else {
@@ -35,7 +34,6 @@ function App() {
          };
          return newNote;
       }
-      
    };
 
    // adds new note to notes
@@ -60,7 +58,10 @@ function App() {
 
    return (
       <>
-         <button onClick={() => setOpenForm(true)}>add note</button>
+         <Background />
+
+<Sidebar setOpenForm={setOpenForm}/>
+        
 
          <AddForm
             addNote={addNote}
