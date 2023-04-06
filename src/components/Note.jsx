@@ -7,7 +7,8 @@ const Note = ({note}) => {
          <div className='note-header-container'>
             <p className='note-date'>{new Date(note.date).toLocaleDateString('en-GB', {month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric'})}</p>
 
-            <p className='note-title'>{note.title}</p>
+
+            <p className='note-title'>{(note.title === '') ? 'Untitled' : note.title.length > 35 ? note.title.substr(0, 60) + '...' : note.title}</p>
 
             <div className='line'></div>
          </div>
