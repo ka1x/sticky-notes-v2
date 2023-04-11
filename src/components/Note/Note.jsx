@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/note.css';
+import './note.scss';
 
 const Note = ({note}) => {
    return (

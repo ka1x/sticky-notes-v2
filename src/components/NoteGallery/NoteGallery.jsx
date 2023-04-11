@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
-import {Note, NoteFull} from '.';
-import '../styles/note.css';
+import React from 'react';
+import {Note} from '..';
+import './notegallery.scss';
 
 const NoteGallery = ({notes, onEdit, onDelete, setEditedNote, setIsEdited, setOpenForm, setSeletedNote, setOpenNote}) => {
    const handleItemClick = (item) => {

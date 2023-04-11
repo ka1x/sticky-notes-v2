@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/window.css';
+import './notefull.scss';
 
 const NoteFull = ({isOpened, setIsOpened, note, onDelete, setEditedNote, setIsEdited, setOpenForm}) => {
    const handleEdit = () => {
@@ -17,7 +17,7 @@ const NoteFull = ({isOpened, setIsOpened, note, onDelete, setEditedNote, setIsEd
    return (
       <>
          <div className={isOpened ? 'window window-visible-animate ' : 'window window-hidden-animate '}>
-            <div className='window-content note-full'>
+            <div className='note-full'>
                <p
                   className='form-close'
                   onClick={() => setIsOpened(false)}

@@ -1,0 +1,30 @@
+
+
+
+.add-note-form {
+   margin: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+flex: 1;
+	
+
+button {
+   color: var(--text-col);
+   margin-top: 2rem;
+   border-radius: 20px;
+   padding: 0.5rem 1rem;
+   letter-spacing: 3px;
+   border: 1px solid var(--text-col);
+   box-shadow: 2px 2px 0px var(--text-col);
+}
+
+ textarea, input[type='text'] {
+   width: 75%;
+   border: 1px solid var(--text-col);
+   box-shadow: 2px 2px 0px var(--text-col);
+   padding: 0.7rem;
+}
+
+}

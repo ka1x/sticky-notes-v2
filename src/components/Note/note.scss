@@ -1,0 +1,57 @@
+/* ---------------------------------------- */
+/* note details */
+
+.note-content-container {
+   width: 100%;
+
+   .note-content {
+      /* this prevents text from overflowing the note */
+      word-wrap: break-word;
+      letter-spacing: 2px;
+      color: var(--text-col);
+   }
+}
+
+.note-header-container {
+   display: flex;
+   gap: 10px;
+   flex-direction: column;
+   height: 40%;
+
+   .note-date {
+      font-size: 10px;
+      color: var(--text-dark);
+   }
+
+   .note-title {
+      font-size: 1rem;
+      color: var(--text-dark);
+   }
+
+   .line {
+      border-bottom: 2px solid var(--text-col);
+      border-radius: 0 25% 25% 0;
+      width: 66%;
+      position: relative;
+   }
+}
+
+/* --------------------------------------------- */
+/* animations */
+
+.note:hover {
+   .note-header-container {
+      transform: translateX(10px);
+      transition: transform 1s;
+   }
+
+   .note-content-container {
+      transform: translateX(10px);
+      transition: transform 1s;
+      transition-delay: 0.2s;
+   }
+   &::before .note-header-container {
+      transform: translateX(-10px);
+      transition: transform 1s;
+   }
+}

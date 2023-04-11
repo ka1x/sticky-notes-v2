@@ -1,6 +1,6 @@
 import React, {useRef} from 'react';
 import {saveAs} from 'file-saver';
-import '../styles/sidebar.css';
+import './sidebar.scss';
 
 const Sidebar = ({setOpenForm, darkMode, setDarkMode, setNotes}) => {
    const handleAddclick = () => {

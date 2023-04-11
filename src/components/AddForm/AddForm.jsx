@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import uuid from 'react-uuid';
 
-import '../styles/window.css';
+import './addform.scss';
 
 const AddForm = ({addNote, isOpened, setIsOpened, setEditedNote, editedNote, isEdited, setIsEdited, onEdit}) => {
    const [title, setTitle] = useState('');
@@ -18,20 +18,7 @@ const AddForm = ({addNote, isOpened, setIsOpened, setEditedNote, editedNote, isE
       passEditData();
    }, [isEdited, editedNote]);
 
-   // const handleSubmit = (e) => {
-   //    e.preventDefault();
 
-   //    if (isEdited) {
-   //       const id = editedNote.id;
-   //       onEdit({id, content, title});
-   //    } else {
-   //       //if adding new
-   //       const id = uuid();
-   //       addNote({id, content, title});
-   //    }
-
-   //    handleClose();
-   // };
    const handleSubmit = (e) => {
       e.preventDefault();
 
@@ -67,7 +54,7 @@ const AddForm = ({addNote, isOpened, setIsOpened, setEditedNote, editedNote, isE
                className='form-close'
                onClick={() => handleClose()}
             >
-               <i class='fa-solid fa-xmark'></i>
+               <i className='fa-solid fa-xmark'></i>
             </p>
             <form
                onSubmit={handleSubmit}

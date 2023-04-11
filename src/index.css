@@ -3,7 +3,7 @@
 :root {
    --text-col: #4c3460;
    --text-dark: #38204d;
-   /* --bg-col: rgb(162, 143, 166); */
+
    --bg-col:linear-gradient( 109.6deg,  rgba(177,173,219,1) 11.2%, rgba(245,226,226,1) 91.1% ) ;
 
    --white2: rgba(255, 255, 255, 0.2);
@@ -13,19 +13,6 @@
 
    --gradient-1: linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
 }
-
-/* .dark-mode {
-   --text-col: #d0d0d0;
-   --bg-col: rgb(43, 39, 43);
-
-   --white2: rgba(255, 255, 255, 0.1);
-   --white3: rgba(255, 255, 255, 0.1);
-   --white4: rgba(255, 255, 255, 0.1);
-   --white7: rgba(46, 43, 47, 0.7);
-
-   --gradient-1: linear-gradient(to right bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
-} */
-
 * {
    margin: 0;
    padding: 0;
@@ -108,4 +95,64 @@ textarea {
 ::-webkit-scrollbar-thumb {
    border-radius: 25%;
    background-color: var(--text-col);
+}
+
+
+
+.window {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   backdrop-filter: blur(0.5rem);
+   z-index: 99;
+}
+.window .window-content {
+   position: absolute;
+   width: 50%;
+   /* height: 66%; */
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   background-color: var(--white7);
+   border-radius: 20px;
+   padding: 1rem;
+   color: var(--text-col);
+   border: 1px solid var(--text-col);
+   box-shadow: 2px 2px 0px var(--text-col);
+}
+.window .window-content .form-close {
+   position: absolute;
+   left: 0;
+   top: 0;
+   font-size: 1rem;
+   margin: 1.5rem;
+   cursor: pointer;
+}
+
+.window-visible-animate {
+   opacity: 1;
+   pointer-events: all;
+   transition: 0.5s ease-in-out;
+   transform: translateY(0);
+}
+
+.window-hidden-animate {
+   opacity: 0;
+   pointer-events: none;
+   transition: 0.5s all ease-in-out;
+   transform: translateY(100%);
+}
+
+/* -------------------------------------- */
+/* media queries */
+
+@media screen and (max-width: 950px) {
+   .window .window-content {
+      width: 75%;
+   }
 }

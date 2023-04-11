@@ -1,0 +1,47 @@
+.note-full {
+   height: 80vh;
+   padding: 2rem;
+   justify-content: space-between ;
+   position: absolute;
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   background-color: var(--white7);
+   border-radius: 20px;
+   color: var(--text-col);
+   border: 1px solid var(--text-col);
+   box-shadow: 2px 2px 0px var(--text-col);
+
+   .date {
+      text-align: right;
+   }
+   .title {
+      font-size: 1.5rem;
+      margin: 1rem 0.4rem;
+   }
+   .line {
+      border-bottom: 2px solid var(--text-col);
+      width: 75%;
+      margin-bottom: 2rem;
+   }
+
+   .content {
+      overflow-y: scroll;
+      padding: 0.5rem 2rem;
+      height: 100%;
+   }
+
+   .icons {
+      display: flex;
+      gap: 20px;
+      margin: 1.5rem 1rem 0 1rem;
+      justify-content: flex-end;
+
+      i {
+         cursor: pointer;
+      }
+   }
+}
