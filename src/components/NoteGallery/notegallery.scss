@@ -9,7 +9,7 @@
    display: flex;
    flex-wrap: wrap;
    align-content: flex-start;
-   justify-content: center;
+   justify-content: flex-start;
    gap: 2rem;
    padding: 5% 0 5% 10%;
    border-radius: 20px;
@@ -35,4 +35,12 @@
       box-shadow: 2px 2px 0px var(--text-col);
       border-radius: 12px;
    }
+}
+
+@media (max-width: 600px){
+   .note-gallery {
+   transform: translateY(-50%);
+   display: flex;
+   }
+
 }
