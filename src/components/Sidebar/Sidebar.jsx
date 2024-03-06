@@ -47,17 +47,17 @@ const Sidebar = ({setOpenForm, darkMode, setDarkMode, setNotes}) => {
       <>
          <div className='nav'>
             <button onClick={() => handleAddclick()}>
-               <i class='fa-solid fa-plus'></i>
+               <i className='fa-solid fa-plus'></i>
             </button>
 
             <button onClick={() => handleDeleteAlll()}>
-               <i class='fa-solid fa-trash'></i>{' '}
+               <i className='fa-solid fa-trash'></i>{' '}
             </button>
 
-            {/* <button onClick={() => setDarkMode(!darkMode)}>{darkMode ? <i class='fa-solid fa-sun'></i> : <i class='fa-solid fa-moon'></i>}</button> */}
+            {/* <button onClick={() => setDarkMode(!darkMode)}>{darkMode ? <i className='fa-solid fa-sun'></i> : <i className='fa-solid fa-moon'></i>}</button> */}
 
             <button onClick={() => exportDataToFile()}>
-               <i class='fa-solid fa-download'></i>
+               <i className='fa-solid fa-download'></i>
             </button>
 
             <input
@@ -67,7 +67,7 @@ const Sidebar = ({setOpenForm, darkMode, setDarkMode, setNotes}) => {
                onChange={handleFileChange}
             />
             <button onClick={() => handleImportClick()}>
-               <i class='fa-solid fa-upload'></i>
+               <i className='fa-solid fa-upload'></i>
             </button>
          </div>
       </>
