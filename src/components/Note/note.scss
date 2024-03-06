@@ -7,8 +7,9 @@
    .note-content {
       /* this prevents text from overflowing the note */
       word-wrap: break-word;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       color: var(--text-col);
+      font-size: 0.7rem;
    }
 }
 
@@ -24,8 +25,10 @@
    }
 
    .note-title {
-      font-size: 1rem;
+      font-size: 0.8rem;
       color: var(--text-dark);
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--text-col);
    }
 
    .line {
@@ -33,6 +36,7 @@
       border-radius: 0 25% 25% 0;
       width: 66%;
       position: relative;
+      display: none;
    }
 }
 
