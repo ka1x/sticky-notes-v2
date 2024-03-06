@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 
 :root {
-   --text-col: #4c3460;
+   --text-col: #38214a;
    --text-dark: #38204d;
 
-   --bg-col:linear-gradient( 109.6deg,  rgba(177,173,219,1) 11.2%, rgba(245,226,226,1) 91.1% ) ;
+   --bg-col: linear-gradient(109.6deg, rgb(191 174 200) 11.2%, rgba(245, 226, 226, 1) 91.1%);
 
    --white2: rgba(255, 255, 255, 0.2);
    --white3: rgba(255, 255, 255, 0.3);
@@ -97,8 +97,6 @@ textarea {
    background-color: var(--text-col);
 }
 
-
-
 .window {
    position: fixed;
    top: 0;
@@ -118,8 +116,9 @@ textarea {
    left: 50%;
    top: 50%;
    transform: translate(-50%, -50%);
-   background-color: var(--white7);
-   border-radius: 20px;
+   /* background-color: var(--white7); */
+   background-color: antiquewhite;
+   /* border-radius: 20px; */
    padding: 1rem;
    color: var(--text-col);
    border: 1px solid var(--text-col);
@@ -154,5 +153,10 @@ textarea {
 @media screen and (max-width: 950px) {
    .window .window-content {
       width: 75%;
+   }
+}
+@media screen and (max-width: 550px) {
+   .window .window-content {
+      width: 100%;
    }
 }

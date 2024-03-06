@@ -13,7 +13,10 @@
 }
 
 .background {
-   background: var(--bg-col);
+   // background: var(--bg-col);
+   background: rgb(191 174 200);
+   filter: brightness(0.4);
+   // background: #3d433e;
    width: 100%;
    height: 100vh;
    z-index: -100;
@@ -28,6 +31,8 @@
       width: 100%;
       height: 100%;
       overflow: hidden;
+
+      display: none;
 
       div {
          position: absolute;

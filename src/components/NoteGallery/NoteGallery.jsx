@@ -18,17 +18,18 @@ const NoteGallery = ({notes, onEdit, onDelete, setEditedNote, setIsEdited, setOp
                </>
             ) : (
                <>
-                  {notes
-                     .sort((a, b) => new Date(b.date) - new Date(a.date))
-                     .map((item, i) => (
-                        <div
-                           className='note'
-                           onClick={() => handleItemClick(item)}
-                           key={i}
-                        >
-                           <Note note={item}></Note>
-                        </div>
-                     ))}
+                  <div className='content'>
+                     {notes
+                        .sort((a, b) => new Date(b.date) - new Date(a.date))
+                        .map((item, i) => (
+                           <div
+                              className='note'
+                              onClick={() => handleItemClick(item)}
+                              key={i}>
+                              <Note note={item}></Note>
+                           </div>
+                        ))}
+                  </div>
                </>
             )}
          </div>

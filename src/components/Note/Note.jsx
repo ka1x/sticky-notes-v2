@@ -14,7 +14,7 @@ const Note = ({note}) => {
 
          <div className='note-content-container'>
             {/* <p>content:{note.content}</p> */}
-            <p className='note-content'>{note.content && note.content.length > 200 ? note.content.substr(0, 200) + '...' : note.content}</p>
+            <p className='note-content'>{note.content && note.content.length > 150 ? note.content.substr(0, 150) + '...' : note.content}</p>
          </div>
       </>
    );
