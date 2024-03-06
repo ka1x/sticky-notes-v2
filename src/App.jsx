@@ -11,6 +11,7 @@ function App() {
 
    const [seletedNote, setSeletedNote] = useState('');
    const [openNote, setOpenNote] = useState(false);
+   const [clickedColor, setClickedColor] = useState(null);
 
    const [darkMode, setDarkMode] = useState(false);
 
@@ -83,6 +84,8 @@ function App() {
                setOpenForm={setOpenForm}
                setSeletedNote={setSeletedNote}
                setOpenNote={setOpenNote}
+               setClickedColor={setClickedColor}
+               clickedColor={clickedColor}
             />
 
             <NoteFull
@@ -94,6 +97,7 @@ function App() {
                setEditedNote={setEditedNote}
                setIsEdited={setIsEdited}
                setOpenForm={setOpenForm}
+               clickedColor={clickedColor}
             />
          </div>
       </>

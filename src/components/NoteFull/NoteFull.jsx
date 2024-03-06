@@ -1,7 +1,7 @@
 import React from 'react';
 import './notefull.scss';
 
-const NoteFull = ({isOpened, setIsOpened, note, onDelete, setEditedNote, setIsEdited, setOpenForm}) => {
+const NoteFull = ({isOpened, setIsOpened, note, onDelete, setEditedNote, setIsEdited, setOpenForm, clickedColor}) => {
    const handleEdit = () => {
       setEditedNote(note);
       setIsEdited(true);
@@ -17,12 +17,11 @@ const NoteFull = ({isOpened, setIsOpened, note, onDelete, setEditedNote, setIsEd
    return (
       <>
          <div className={isOpened ? 'window window-visible-animate ' : 'window window-hidden-animate '}>
-            <div className='note-full'>
+            <div className='note-full' style={{backgroundColor: clickedColor}}>
                <p
                   className='form-close'
-                  onClick={() => setIsOpened(false)}
-               >
-                  <i class='fa-solid fa-xmark'></i>
+                  onClick={() => setIsOpened(false)}>
+                  <i className='fa-solid fa-xmark'></i>
                </p>
 
                <div className='header'>
@@ -37,12 +36,10 @@ const NoteFull = ({isOpened, setIsOpened, note, onDelete, setEditedNote, setIsEd
                <div className='icons'>
                   <i
                      className='fa-solid fa-trash'
-                     onClick={() => handleDelete()}
-                  ></i>
+                     onClick={() => handleDelete()}></i>
                   <i
                      className='fa-solid fa-pen-to-square'
-                     onClick={() => handleEdit()}
-                  ></i>
+                     onClick={() => handleEdit()}></i>
                </div>
             </div>
          </div>

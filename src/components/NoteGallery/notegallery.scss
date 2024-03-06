@@ -36,7 +36,7 @@
          width: 220px;
          height: 220px;
          /* background: var(--white2); */
-         background: var(--gradient-1);
+         // background: var(--gradient-1);
          backdrop-filter: blur(10px);
          // border: 1px solid var(--text-col);
          // box-shadow: 2px 2px 0px var(--text-col);
@@ -45,7 +45,7 @@
          // border-radius: 12px;
          transition: 0.1s linear all;
 
-         background: rgb(254, 243, 214);
+         // background: rgb(254, 243, 214);
 
          &::before {
             height: 60px;
@@ -71,7 +71,7 @@
             -moz-transform: rotate(2deg);
             position: relative;
             top: 5px;
-            background: #cfc;
+            // background: #cfc;
             &::before {
                left: 50%;
             }
@@ -82,7 +82,7 @@
             -moz-transform: rotate(2deg);
             position: relative;
             top: -5px;
-            background: rgb(255, 204, 204);
+            // background: rgb(255, 204, 204);
 
             &::before {
                left: 55%;
@@ -94,7 +94,7 @@
             -moz-transform: rotate(-3deg);
             position: relative;
             top: -5px;
-            background: #ccf;
+            // background: #ccf;
 
             &::before {
                left: 55%;
