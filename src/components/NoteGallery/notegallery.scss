@@ -32,7 +32,8 @@
          cursor: pointer;
          width: 220px;
          height: 220px;
-         backdrop-filter: blur(10px);
+         -webkit-backdrop-filter: blur(10px);
+                 backdrop-filter: blur(10px);
          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
          transition: 0.1s linear all;
@@ -42,7 +43,6 @@
             width: 40px;
             content: '';
             background-color: rgba($color: #fff, $alpha: 0.4);
-            // backdrop-filter: blur(50px);
             top: 0;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -96,9 +96,10 @@
 
 @media (max-width: 600px) {
    .note-gallery {
-      // transform: translateY(-50%);
       display: flex;
       .content {
+         width: -webkit-min-content;
+         width: -moz-min-content;
          width: min-content;
          justify-content: center;
       }
