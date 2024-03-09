@@ -23,7 +23,7 @@
 html {
    scroll-behavior: smooth;
    width: 100%;
-   min-height: 100vh;
+   min-height: 100dvh;
 }
 h1,
 h2,
@@ -109,16 +109,14 @@ textarea {
 .window .window-content {
    position: absolute;
    width: 50%;
-   /* height: 66%; */
    display: flex;
    justify-content: center;
    flex-direction: column;
    left: 50%;
+   border-radius: 10px;
    top: 50%;
    transform: translate(-50%, -50%);
-   /* background-color: var(--white7); */
    background-color: antiquewhite;
-   /* border-radius: 20px; */
    padding: 1rem;
    color: var(--text-col);
    border: 1px solid var(--text-col);
@@ -147,8 +145,6 @@ textarea {
    transform: translateY(100%);
 }
 
-/* -------------------------------------- */
-/* media queries */
 
 @media screen and (max-width: 950px) {
    .window .window-content {

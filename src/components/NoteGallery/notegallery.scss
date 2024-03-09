@@ -1,19 +1,16 @@
 .note-gallery {
    width: 80%;
    height: 100%;
-   /* position: absolute; */
    margin: 2rem auto;
    transform: translateX(10%);
-   /* left: 0; */
-   /* top: 0; */
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
    gap: 2rem;
    padding: 5% 0;
    border-radius: 20px;
-   // overflow-y: scroll;
-   /* z-index: 1; */
+
+   >h2{color: #20102d}
    .content {
       display: flex;
       flex-wrap: wrap;
@@ -35,24 +32,17 @@
          cursor: pointer;
          width: 220px;
          height: 220px;
-         /* background: var(--white2); */
-         // background: var(--gradient-1);
          backdrop-filter: blur(10px);
-         // border: 1px solid var(--text-col);
-         // box-shadow: 2px 2px 0px var(--text-col);
          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-         // border-radius: 12px;
          transition: 0.1s linear all;
-
-         // background: rgb(254, 243, 214);
 
          &::before {
             height: 60px;
             width: 40px;
             content: '';
             background-color: rgba($color: #fff, $alpha: 0.4);
-            backdrop-filter: blur(50px);
+            // backdrop-filter: blur(50px);
             top: 0;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -61,7 +51,6 @@
 
          &:hover {
             box-shadow: 0 4px 4px 2px rgba($color: #000000, $alpha: 0.5);
-            // border: 3px solid #1b1b1b;
             transition: 0.1s linear all;
          }
 
@@ -69,7 +58,6 @@
             transform: rotate(2deg);
             position: relative;
             top: 5px;
-            // background: #cfc;
             &::before {
                left: 50%;
             }
@@ -78,7 +66,6 @@
             transform: rotate(2deg);
             position: relative;
             top: -5px;
-            // background: rgb(255, 204, 204);
 
             &::before {
                left: 55%;
@@ -89,7 +76,6 @@
 
             position: relative;
             top: -5px;
-            // background: #ccf;
 
             &::before {
                left: 55%;
@@ -110,7 +96,7 @@
 
 @media (max-width: 600px) {
    .note-gallery {
-      transform: translateY(-50%);
+      // transform: translateY(-50%);
       display: flex;
       .content {
          width: min-content;
